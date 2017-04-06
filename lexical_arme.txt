@@ -1,3 +1,4 @@
+### NOUN ###
 gun
 axe
 battle-axe
@@ -6,3 +7,17 @@ deer foot
 knife
 poison
 rope
+artillery
+heavy weapon
+ordnance
+tongue
+toxicant
+poisonous substance
+cutter
+stonecutter
+
+
+### VERB ###
+poison 
+envenom
+
