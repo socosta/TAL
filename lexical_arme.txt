@@ -1,0 +1,8 @@
+gun
+axe
+battle-axe
+candlestick
+deer foot
+knife
+poison
+rope
