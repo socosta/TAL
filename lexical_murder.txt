@@ -26,6 +26,8 @@ death
 murder
 murdering
 execution
+murderer
+manslayer
 
 ### ADJECTIVES ###
 
