@@ -82,9 +82,17 @@ def tueur():
     i = 0
     for lignes in corpus:
         if ("PERSON" in lignes):
+            #récupération de l'index de chaque occurence de PERSON
             i += 1
         if (i >= 2):
-            print("Y'a un tueur dans cette phrase : "+lignes)
+            #condition pour chercher le verbe à l'intérieur des index précédents. on regarde donc chaque verbe de notre lexique
+            #ne peut pas etre lexique car pas de différenciation entre mots/verbes dans ce lexique
+            for mots in lexique :
+                #condition si le mot se trouve entre les index
+                #ne peut pas être lignes car on ne cherche pas dans la ligne entière
+                if (mots in lignes):
+                    #alors il y a un tueur. Selon notre lexique, la première personne aurait tué la deuxième
+                    
 
 tueur()
 
