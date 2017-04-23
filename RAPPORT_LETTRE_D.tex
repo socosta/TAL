@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt,titlepage]{report}
+\pagestyle{headings}
+
+% Import des extensions
+\usepackage[latin1]{inputenc} % caractères spéciaux (accents)
+\usepackage[francais]{babel} % langue française
+\usepackage{graphicx} % package pour insérer des images
+\usepackage{hyperref} % package pour créer des liens hypertextes
+
+
+\title{Rapport Ingénierie Linguistique - Lettre D}
+\author{BOUMOKONIA Olivia \and BROGGI Thomas \and CHOLEZ Maud \and DA COSTA Sophie}
+\date{\today}
+ 
+\begin{document}
+\maketitle
+\sloppy
+
+		
+		\tableofcontents
+		
+
+		
+		\chapter{Introduction}
+\indent Notre équipe pour ce projet est composée de quatre membres : BOUMOKONIA Olivia, BROGGI Thomas, CHOLEZ Maud et DA COSTA Sophie. Nous sommes tous les quatres étudiants issus de la licence en mathématiques informatique appliquées aux sciences humaines et sociales, parcours Sciences Cognitives. Ce projet a été conçu dans le cadre d'un projet en ingénierie linguistique enseigné par M.Amblard. \newline Le but de ce projet étant de créer un enquêteur qui doit traverser des pages Wikipédia afin de déterminer un meurtrier, une victime, quand et où le meurtre de la victime a eu lieu. Une des conditions de ce projet était que les noms de ces meurtriers doivent tous commencer par la lettre ''D'' Pour cela, nous devions donc identifier automatiquement, à l'aide des outils donnés dans le sujet du projet, des noms propres, des verbes de meurtre, des noms communs relatifs à la mort, etc\dots Nous avons ainsi déterminé des champs lexicaux en rapport avec notre sujet. \\ \\
+\indent Nous avons alors fait le choix d'un corpus afin de limiter nos recherches, tout en ayant une quantité suffisante de pages et d'informations disponibles. En effet, nous avons choisi de traiter notre programme sur le thème des zombies dans les films. Nous nous sommes dit que ce corpus nous permettrait d'obtenir un certain nombre de meurtriers, car rappelons-le, notre enquêteur doit pouvoir repérer entre {\nombre 50} et {\nombre 100} meurtriers. De plus, notre corpus doit être en anglais, ce qui  engendre le fait que les outils qui vont constituer notre enquêteur doivent être adaptés à cette langue. \\ \\
+\indent Auparavant nous avions acquis quelques notions en traitement automatique des langues, notamment grâce au cours de TAL suivi en L{\nombre 2} MIASHS, enseigné par M.COUCEIRO\@. 
+Certaines commandes utilisées pour le projet nous ont été fournies durant les TD du cours d'ingénierie linguistique, dispensé par M.AMBLARD\@. Le reste des commandes - notamment les commandes Python - nous ont été mises à disposition grâce à nos recherches sur diverses sources. 
+
+\chapter{Notre corpus}
+\indent Comme nous avons pu le dire dans l'introduction, nous avons choisi le corpus qui a pour sujet \og les zombies dans les films \fg. Cependant, ce choix n'était pas notre première suggestion de corpus. En effet, nous avions tout d'abord pensé aux criminels, aux séries criminelles, et à d'autres exemples de ce type. 
+\newline Néanmoins, nous avons estimé que nos premières idées étaient trop \og banales \fg ~et trop \og communes \fg. Nous avons alors décidé d'avoir un corpus original. C'est pour cela que nous avons voté à l'unanimité pour un corpus sur les zombies et plus particulièrement les zombies dans les films afin que le corpus soit moins conséquent. De plus, c'était un choix unanime au sein du groupe car tous les membres de l'équipe ont aimé ce thème. Le thème des zombies est assez conséquent car ils sont traditionnellement dans les films en tant que tueurs ; on peut par exemple citer \og The Walking Dead \fg, comme une série où les zombies ont le rôle principal avec des morts de caractères principaux ou pas assez régulières (no spoil). 
+
+\newline Pour pouvoir extraire le corpus, nous avons suivi la partie \og constitution d'un corpus \fg ~donnée dans le sujet du corpus, en suivant le lien suivant : 
+\newline \newline 
+\small{https://fr.wikipedia.org/wiki/Sp/unhbox/voidb@x/bgroup/let/unhbox/voidb@x\-/setbox/@tempboxa/hbox\{e/global/mathchardef/accent@spacefactor/spacefactor\-\}/accent19e/egroup/spacefactor/accent@spacefactorcial:Exporter} \\
+
+\\
+
+{\nombre 128} pages Wikipedia étaient liées au thème ''Zombie'', nous avons extrait {\nombre 500} pages Wikipedia contenant un lien redirigeant vers la page ''Zombie (film)''. Ainsi nous avons pu constituer notre corpus sous forme d'un fichier texte que nous avons pu utiliser dans notre programmation Python. 
+
+\chapter{Déroulement de la réalisation}
+\section{Planning}
+\includegraphics[scale=0.7]{images/planning-p1.png}
+\includegraphics[scale=0.6]{images/planning-p2.png}
+
+\section{Retour sur les tâches réalisées}
+\indent Comme pour tout projet, avant de passer à l'étape de la réalisation, il faut mettre en place une période dite d'avant-projet. Ainsi, durant ce laps de temps, nous avons notamment choisi les membres de notre groupe. Ce choix n'a pas été difficile, car nous avons l'habitude de travailler ensemble et donc nous savions que nous travaillerions dans de bonnes conditions. Ensuite, M. AMBLARD, avec qui nous avions cours de travaux dirigés, nous a attribué la lettre D. 
+\newline \newline
+\indent Pour la conception de notre enquête, nous avons eu besoin du logiciel CoreNLP, qui nous a permis d'utiliser certaines commandes, fournies par notre professeur. Le c\oe ur de notre projet reposait sur l'élaboration d'un corpus autour d'un thème, qui se devait pertinent pour que nous arrivions à trouver les données nécessaires pour atteindre notre but - pour rappel : trouver {\nombre 50} à {\nombre 100} noms de meurtriers commençant par la lettre D et établir le contexte de chaque drame. La génération de ce corpus s'est faite à partir d'un ensemble de pages de WikiPédia, autour du thème des zombies. 
+
+\newline \newline
+\indent Les premières étapes que nous avons réalisées ont été de segmenter le corpus à l'aide de la commande fournie dans le TD{\nombre 1} et du logiciel CoreNLP :
+ 
+\\ \\ \texttt{java -mx1g -cp ''*'' edu.stanford.nlp.pipeline.StanfordCoreNLP -props StanfordCoreNLP-french.properties
+-annotators tokenize,ssplit,pos -le corpus.txt}
+\newline \newline 
+
+\indent Ensuite, nous avons tenté de définir les entitées nommées avec ce même logiciel et une autre commande, mais nous n'avons pas réussi à le faire, nous avons donc été obligés de trouver une autre solution via Python. Nous en parlerons dans la partie concernant les problèmes que nous avons rencontrés. 
+\newline
+La suite des événements a été de mettre en place des champs lexicaux nous permettant de faire un tri dans les données présentes dans le corpus. En effet, tout n'était pas utile au sein du corpus, il fallait donc réussir à reconnaître ce qui avait un lien avec notre enquêteur et ce qui n'en avait pas. Les champs lexicaux étaient donc là pour pouvoir mettre en avant les phrases dont le contexte était intéressant. Par exemple, une phrase telle que ''The cat is eating an apple.'' n'avait aucun intérêt, contrairement à une phrase contenant les mots : ''kill'', ''gun'', ''murder'', \dots
+
+\newline
+\indent Une fois que les champs lexicaux étaient créés, nous pouvions les utiliser pour créer un corpus ne contenant que les informations pertinentes. Ce nouveau corpus ne contient plus que les phrases pour lesquelles le programme avait trouvé des termes appartenant à nos champs lexicaux. Cette étape devrait nous permettre de trouver les meurtriers et le contexte dans lequel s'est déroulé son acte. Mais avant de nous lancer dans cette recherche, nous devons identifier les entités nommées présentes dans le nouveau corpus allégé. Etant donné que nous n'arrivions pas à utiliser la commande présente dans le logiciel CoreNLP, nous avons dû effectuer des recherches assez longues afin de trouver une solution avec Python. 
+
+\newline \newline
+\indent Une fois que nous avons trouvé notre méthode, nous l'avons appliqué à notre corpus. Mais malheureusement à cet instant, la reconnaissance des entités nommées dans ce nouveau fichier prit beaucoup de temps, si bien que bloqués par les délais, nous n'avons pas eu le résultat final de cette étape. Cependant, Thomas a tout de même décidé de commencer la fonction qui permet de trouver \og qui a tué qui ? \fg. Pour se faire, il a utilisé le résultat qui devrait être fourni par la reconnaissance des entités nommées, et il a cherché les phrases pour lesquelles il y avait une EN représentant une personne ou deux personnes, commençant par la lettre D. Suite à cela, il fallait regarder si autour de ces termes, il y avait un terme représentant un meurtre, en s'appuyant sur notre corpus.  
+
+\section{Github}
+\indent Au sein de notre cursus, nous avons l'habitude de réaliser des projets en groupe. De cette façon, nous avons découvert l'outil qu'est GitHub. L'utilisation de ce dernier était obligatoire pour l'élaboration de notre enquêteur. Ainsi, vous pourrez trouver ci-dessous une capture d'écran de notre activité sur cet outil. De plus, si vous souhaitez visiter notre répertoire, vous pouvez vous y rendre en cliquant sur le lien suivant : \url{https://github.com/socosta/TAL-Lettre-D}.
+
+\chapter{Nos champs lexicaux}
+\indent Nous avons choisi quatre champs lexicaux à exploiter pour trouver les meurtriers et les victimes dans notre corpus : ''arme'', ''murder'', ''dead victim'', et ''crime''. Nous avons remarqué plusieurs noms et verbes se trouvant dans plusieurs de nos champs lexicaux, c'est pourquoi à l'aide du site \url{nuagedemots.fr}, nous avons réalisé un nuage des mots de ces champs, afin de visualiser leur occurrence. \newline
+Les champs lexicaux contiennent différentes catégories de mots : on y trouve des verbes, des noms communs, des adjectifs et des adverbes. A l'aide de l'outil Wordnet (\url{http://wordnetweb.princeton.edu/perl/webwn}), nous avons recherché les différents mots associés aux titres de nos champs lexicaux. Par exemple :
+
+\newline \newline \newline \newline
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=1]{images/lexical-one.png}
+	\caption{Champ lexical du mot ''crime'' - Wordnet}
+\end{figure}
+
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=1]{images/lexical-two.png}
+	\caption{Champ lexical du mot ''dead'' - Wordnet}
+\end{figure}
+
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=1]{images/lexical-one.png}
+	\caption{Champ lexical du mot ''crime'' page {\nombre 2} - Wordnet}
+\end{figure}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.7]{images/wordcloud.png}
+	\caption{Nuage de mots contenus dans nos différents champs lexicaux avec une taille proportionnelle aux occurrences. 
+ - Nuagedemots.fr}
+\end{figure}
+
+
+\chapter{Techniques utilisées et choix d'implémentation}
+\indent Comme vous l'avez peut être deviné, nous avons fait le choix d'utiliser le langage de programmation Python. En effet, nous n'avons jamais utilisé le langage Java dans le domaine linguistique, ce n'était donc pas une bonne idée d'en faire usage ici.
+Au cours de l'enseignement que nous avons suivi, nous avons découvert, ou parfois redécouvert, des notions en lien avec le traitement automatique des langues, que nous avons bien évidemment utilisées dans notre conception. Nous avons traité des points tels que la tokenisation, la reconnaissance des entités nommées, le pos-tagging, \dots~ Nous allons revoir ce à quoi cela correspond et la raison de leur utilisation. \\ 
+\indent Premièrement, la \textbf{tokenisation} est l'opération de segmenter un acte langagier en sous-unités appelées tokens. Les tokens les plus courants sont le découpage en mots ou en phrases. Nous avons effectué une tokenisation en phrases - dans le but de ne garder que les phrases intéressantes contenues dans notre corpus. La tokenisation en mots n'était pas vraiment appropriée étant donné que lorsque nous trouvions un mot qui avait de l'intérêt pour l'enquêteur, nous devions aussi connaître le reste du contexte de la phrase pour répondre à l'ensemble des questions. \\
+\indent Deuxièmement, la \textbf{reconnaissance des entités nommées}. Une entité nommée est représentée par tous les éléments du langage qui font référence à une entité unique et concrète, appartenant à un domaine spécifique. Ainsi, on les regroupe en quatres catégories : personne, organisation, localisation et date. Pour nous, l'intérêt de ces termes est de pouvoir mettre en évidence les noms de nos meurtriers et aussi trouver le lieu sur lequel ils ont commis leur crime. Afin de trouver comment effectuer cette action avec Python, nous avons dû nous plonger au c\oe ur de la documentation, cela n'a pas été simple, mais Thomas a fini par la trouver. \\
+\indent Enfin, le \textbf{pos-tagging}, ou \textit{étiquetage morpho-syntaxique}, est l'action d'associer aux mots d'un texte les informations grammaticales leur correspondant. Cette étape a été faite lorsque nous avons appliqué la première commande fournie pour l'utilisation de CoreNLP. Mais nous n'en avons pas fait usage au moment où nous rédigeons ce rapport.
+
+\\ \\
+\indent D'un point de vue général, l'implémentation de notre code, réalisé en Python, permet les étapes suivantes :
+\begin{itemize}
+	\item[*] L'ouverture de notre corpus, en mode lecture,
+	\item[*] La tokenisation de ce dernier en phrases, 
+	\item[*] La mise en place d'une fonction permettant de chercher les phrases contenant des termes présents dans nos champs lexicaux,
+	\item[*] Ces phrases sont ensuites mises de côté pour élaborer un corpus plus léger,
+	\item[*] Ensuite vient la reconnaissance des entités nommées,
+	\item[*] Puis la recherche de la réponse à la question \og qui a tué qui ?\fg ~, en s'appuyant sur le résultat fourni par l'étape précédente.
+\end{itemize}
+
+
+\chapter{Problèmes lors de la réalisation}
+\indent Etant donné que nous ne sommes pas vraiment habitués à écrire des programmes pour le traitement automatique des langues, la réalisation de ce projet nous a posé quelques problèmes. \newline
+Cela a commencé lorsque nous avons dû utiliser le logiciel CoreNLP. Nous n'avions aucune connaissance à sujet. Alors quand nous avons essayé de faire fonctionner les commandes fournies par M.AMBLARD, nous avons été face à des difficultés. En ce qui concerne la commande qui permet d'effectuer le pos-tagging, nous n'arrivions pas à la faire fonctionner sur notre corpus. Nous étions face à une erreur mettant en cause la place disponible dans notre machine virtuelle. A force de persévérance, avec l'aide de certains de nos camarades d'autres groupes, nous avons réussi à obtenir le résultat souhaité. Cependant, lorsque nous avons voulu utiliser la commande permettant l'identification des entités nommées, cela ne fonctionnait pas, malgré plusieurs essais, le résultat était toujours le même : le terminal n’arrivait pas au bout de sa tentative. Ainsi, nous nous sommes dit que la taille importante de notre corpus était peut-être en cause, mais même sur un extrait, cela n'allait pas. Alors, nous avons tenté de trouver une solution. Et Olivia trouva ce site : \url{http://www.lattice.cnrs.fr/sites/itellier/SEM.html}. A partir d'un texte, il est possible de mettre en avant différentes choses : \textit{pos}, \textit{chunk} et \textit{entités nommées}. Ci-dessous, une capture d'écran afin de se rendre compte de ce que cela donne lorsque nous voulons trouver les entités nommées d’un texte : 
+
+\includegraphics[scale=0.5]{images/sem.png}
+\\
+Une légende est associé au surlignage :
+
+\includegraphics[scale=0.5]{images/sem-legend.png}
+
+\indent Ainsi, nous nous sommes dit que nous avions une solution de secours si nous n'arrivions pas à établir les entités nommées à partir de Python et de la librairie NLTK. Sachant qu'il est possible d'extraire le résultat du site sous les formes suivantes : HTML, coll ou text. Heureusement, nous avons fini par trouver la solution pour établir la reconnaissance des entités nommées avec Python. Mais un nouveau problème s'est présenté à nous, cela a pris beaucoup plus de temps que nous ne l'imaginions. 
+
+\newline Nous avons principalement connu des embûches à cause de nos connaissances : auparavant, nous n'avions utilisé NLTK que partiellement et nous sommes loin de maîtriser l'ensemble  des possibilités présentes dans cette librairie. Aussi, c'est la première fois que nous devions utiliser le logiciel LATEX, et c'est aussi un point qui nous a posé problème. Nous sommes loin de connaître le fonctionnement de ce dernier, ainsi la mise en page de notre rapport est restée très basique ne sachant pas comment faire autrement - si cela était possible. 
+
+
+\chapter{Rétrospective et conclusion}
+\indent Malgré beaucoup de recherches, notamment sur wordnet, nous estimons que nos champs lexicaux n'étaient peut être pas assez complets. En effet, compte-tenu de la taille de notre corpus, nous sommes probablement passés à côté de beaucoup d'autres mots qui auraient pu nous indiquer un meurtrier ou tout autre indication qui aurait pu nous aider dans notre étude. Donc nous pensons que nous ne pouvions pas mettre la main sur toutes les informations disponibles dans le corpus.
+
+Néanmoins, nous avons pu tout de même obtenir un corpus, tokenizer le corpus, établir des champs lexicaux et encore repérer les entités nommées. Grâce à toutes ces étapes, nous sommes capables de déterminer les tueurs et le lieu de leur meurtre (ou bien le film dans certains cas), ainsi que les victimes et la façon dont cela s'est passé.
+
+Nous aurions pu, éventuellement, créer des champs lexicaux directement via Python. En effet, grâce à cette technique nous aurions pu avoir des champs lexicaux plus vastes. De plus, faire les champs lexicaux grâce à Python nous aurait permis un travail moins fastidieux. Mais nous avions déjà mis en place nos champs lexicaux lorsque nous avons pris connaissance de cette technique via Python. 
+
+Enfin, notre plus gros défaut a été de ne pas savoir gérer notre temps avec les autres projets en cours. Durant quelque temps, nous sommes restés axés sur nos problèmes et nous les avons laissé de côté, à tort. Ce qui explique que notre enquêteur n’est pas abouti aujourd’hui.
+
+\appendix % les annexes du rapport
+
+\chapter{Premier annexe}
+\chapter{Second annexe}
+
+\listoffigures        % Liste des figures
+\listoftables        % Liste des tableaux
+
+\end{document}
