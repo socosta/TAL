@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 09:50
 entering extended mode
 **./RAPPORT_LETTRE_D.tex
 (RAPPORT_LETTRE_D.tex
@@ -380,13 +380,13 @@ or  <return>  to continue without it.
 
 ]
 Chapitre 3.
-<images/planning-p1.png, id=86, 559.08875pt x 369.38pt>
+<images/planning-p1.png, id=85, 559.08875pt x 369.38pt>
 File: images/planning-p1.png Graphic file (type png)
  <use images/planning-p1.png>
 Package pdftex.def Info: images/planning-p1.png used on input line 44.
 (pdftex.def)             Requested size: 391.35945pt x 258.56422pt.
 
-<images/planning-p2.png, id=88, 690.58pt x 484.81125pt>
+<images/planning-p2.png, id=87, 690.58pt x 484.81125pt>
 File: images/planning-p2.png Graphic file (type png)
  <use images/planning-p2.png>
 Package pdftex.def Info: images/planning-p2.png used on input line 45.
@@ -522,7 +522,18 @@ or  <return>  to continue without it.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 67.
-[7]
+[7] <images/github-global.png, id=106, 764.10469pt x 215.30438pt>
+File: images/github-global.png Graphic file (type png)
+ <use images/github-global.png>
+Package pdftex.def Info: images/github-global.png used on input line 74.
+(pdftex.def)             Requested size: 382.0514pt x 107.65192pt.
+
+<images/github-members.png, id=107, 743.02594pt x 296.60812pt>
+File: images/github-members.png Graphic file (type png)
+ <use images/github-members.png>
+Package pdftex.def Info: images/github-members.png used on input line 80.
+(pdftex.def)             Requested size: 371.51205pt x 148.3037pt.
+ [8 <./images/github-global.png> <./images/github-members.png>]
 Chapitre 4.
 
 ! LaTeX Error: There's no line here to end.
@@ -531,7 +542,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 \newline
+l.88 \newline
               \newline \newline \newline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -544,7 +555,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 \newline \newline
+l.88 \newline \newline
                        \newline \newline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -557,7 +568,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 \newline \newline \newline
+l.88 \newline \newline \newline
                                 \newline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -570,29 +581,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 \newline \newline \newline \newline
+l.88 \newline \newline \newline \newline
                                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<images/lexical-one.png, id=108, 393.72093pt x 221.32687pt>
+<images/lexical-one.png, id=118, 393.72093pt x 221.32687pt>
 File: images/lexical-one.png Graphic file (type png)
  <use images/lexical-one.png>
-Package pdftex.def Info: images/lexical-one.png used on input line 80.
+Package pdftex.def Info: images/lexical-one.png used on input line 92.
 (pdftex.def)             Requested size: 393.71997pt x 221.32631pt.
 
-Overfull \hbox (3.71997pt too wide) in paragraph at lines 80--81
+Overfull \hbox (3.71997pt too wide) in paragraph at lines 92--93
  [] 
  []
 
-<images/lexical-two.png, id=109, 399.74344pt x 428.35031pt>
+<images/lexical-two.png, id=119, 399.74344pt x 428.35031pt>
 File: images/lexical-two.png Graphic file (type png)
  <use images/lexical-two.png>
-Package pdftex.def Info: images/lexical-two.png used on input line 87.
+Package pdftex.def Info: images/lexical-two.png used on input line 99.
 (pdftex.def)             Requested size: 399.74245pt x 428.34926pt.
 
-Overfull \hbox (9.74245pt too wide) in paragraph at lines 87--88
+Overfull \hbox (9.74245pt too wide) in paragraph at lines 99--100
  [] 
  []
 
@@ -601,36 +612,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: images/lexical-one.png Graphic file (type png)
 <use images/lexical-one.png>
-Package pdftex.def Info: images/lexical-one.png used on input line 94.
+Package pdftex.def Info: images/lexical-one.png used on input line 106.
 (pdftex.def)             Requested size: 393.71997pt x 221.32631pt.
 
-Overfull \hbox (3.71997pt too wide) in paragraph at lines 94--95
+Overfull \hbox (3.71997pt too wide) in paragraph at lines 106--107
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/wordcloud.png, id=110, 1027.84pt x 770.88pt>
+<images/wordcloud.png, id=120, 1027.84pt x 770.88pt>
 File: images/wordcloud.png Graphic file (type png)
  <use images/wordcloud.png>
-Package pdftex.def Info: images/wordcloud.png used on input line 100.
-(pdftex.def)             Requested size: 1027.8375pt x 770.87813pt.
-
-Overfull \hbox (637.8375pt too wide) in paragraph at lines 100--102
- [] 
- []
-
-
-LaTeX Warning: Float too large for page by 221.21144pt on input line 103.
+Package pdftex.def Info: images/wordcloud.png used on input line 112.
+(pdftex.def)             Requested size: 308.35437pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8
+[9
 
- <./images/lexical-one.png>] [9 <./images/lexical-two.png>] [10] [11 <./images/wordcloud.png>]
+ <./images/lexical-one.png>] [10 <./images/lexical-two.png>] [11 <./images/wordcloud.png>]
 Chapitre 5.
+[12
+
+]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -638,7 +645,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.113 \\ \\
+l.125 \\ \\
            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -651,18 +658,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 \indent
+l.126 \indent
               D'un point de vue général, l'implémentation de notre code, réa...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-[12
-
-]
-Overfull \hbox (34.1836pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 CHAPITRE 5.  TECHNIQUES UTILIS[]EES ET CHOIX D'IMPL[]EMENTATION \OT1/cmr/m/n/12 13
- []
 
 [13]
 Chapitre 6.
@@ -674,7 +674,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 ...t était toujours le même : le terminal n’
+l.139 ...t était toujours le même : le terminal n’
                                                   arrivait pas au bout de sa...
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -687,34 +687,29 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 ...us voulons trouver les entités nommées d’
+l.139 ...us voulons trouver les entités nommées d’
                                                   un texte :
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-<images/sem.png, id=147, 1321.93875pt x 505.89pt>
+<images/sem.png, id=152, 1321.93875pt x 505.89pt>
 File: images/sem.png Graphic file (type png)
  <use images/sem.png>
-Package pdftex.def Info: images/sem.png used on input line 129.
-(pdftex.def)             Requested size: 1321.93555pt x 505.88875pt.
+Package pdftex.def Info: images/sem.png used on input line 141.
+(pdftex.def)             Requested size: 396.58469pt x 151.76816pt.
 
-Overfull \hbox (949.56036pt too wide) in paragraph at lines 129--132
+Overfull \hbox (24.2095pt too wide) in paragraph at lines 141--144
 [][] 
  []
 
 [14
 
-] <images/sem-legend.png, id=152, 1137.24875pt x 342.27875pt>
+] <images/sem-legend.png, id=157, 1137.24875pt x 342.27875pt>
 File: images/sem-legend.png Graphic file (type png)
  <use images/sem-legend.png>
-Package pdftex.def Info: images/sem-legend.png used on input line 133.
-(pdftex.def)             Requested size: 1137.24599pt x 342.2779pt.
+Package pdftex.def Info: images/sem-legend.png used on input line 145.
+(pdftex.def)             Requested size: 341.17726pt x 102.6844pt.
 
-Overfull \hbox (764.8708pt too wide) in paragraph at lines 133--134
-[][] 
- []
-
-[15 <./images/sem.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -722,13 +717,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \newline
+l.149 \newline
                Nous avons principalement connu des embûches à cause de nos c...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[16 <./images/sem-legend.png>]
+[15 <./images/sem.png> <./images/sem-legend.png>]
 Chapitre 7.
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -738,7 +733,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.147 ...t. Ce qui explique que notre enquêteur n’
+l.159 ...t. Ce qui explique que notre enquêteur n’
                                                   est pas abouti aujourd’hui.
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -751,68 +746,55 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.147 ...notre enquêteur n’est pas abouti aujourd’
+l.159 ...notre enquêteur n’est pas abouti aujourd’
                                                   hui.
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[17
+[16
 
 ]
 Annexe A.
-[18
+<images/github-detail.png, id=168, 292.09125pt x 662.475pt>
+File: images/github-detail.png Graphic file (type png)
+ <use images/github-detail.png>
+Package pdftex.def Info: images/github-detail.png used on input line 167.
+(pdftex.def)             Requested size: 146.04526pt x 331.2367pt.
+ [17
 
-]
-Annexe B.
-[19
-
-] (RAPPORT_LETTRE_D.lof)
+ <./images/github-detail.png>] (RAPPORT_LETTRE_D.lof)
 \tf@lof=\write5
 \openout5 = `RAPPORT_LETTRE_D.lof'.
 
- [20
-
-] (RAPPORT_LETTRE_D.lot)
-\tf@lot=\write6
-\openout6 = `RAPPORT_LETTRE_D.lot'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
- [21
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+ [18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
  (RAPPORT_LETTRE_D.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
-
-
-Package rerunfilecheck Warning: File `RAPPORT_LETTRE_D.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RAPPORT_LETTRE_D.out':
-(rerunfilecheck)             Before: 8AA732BABC30B45C0685A96ED777BD8F;682
-(rerunfilecheck)             After:  A88C6A60DA4ECECED01C17B135DCF18D;749.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
+Package rerunfilecheck Info: File `RAPPORT_LETTRE_D.out' has not changed.
+(rerunfilecheck)             Checksum: F0011F870B794B9931132130D2CA877A;702.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 6354 strings out of 493333
- 93946 string characters out of 3139191
- 186116 words of memory out of 3000000
- 9780 multiletter control sequences out of 15000+200000
- 11498 words of font info for 40 fonts, out of 3000000 for 9000
+ 6361 strings out of 493333
+ 94261 string characters out of 3139191
+ 186164 words of memory out of 3000000
+ 9790 multiletter control sequences out of 15000+200000
+ 11146 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,6n,30p,1440b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on RAPPORT_LETTRE_D.pdf (22 pages, 616624 bytes).
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on RAPPORT_LETTRE_D.pdf (19 pages, 669125 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

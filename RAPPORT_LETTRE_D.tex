@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt,titlepage]{report}
-\pagestyle{headings}
+\pagestyle{plain}
 
 % Import des extensions
 \usepackage[latin1]{inputenc} % caractères spéciaux (accents)
@@ -67,7 +67,19 @@ La suite des événements a été de mettre en place des champs lexicaux nous permet
 \indent Une fois que nous avons trouvé notre méthode, nous l'avons appliqué à notre corpus. Mais malheureusement à cet instant, la reconnaissance des entités nommées dans ce nouveau fichier prit beaucoup de temps, si bien que bloqués par les délais, nous n'avons pas eu le résultat final de cette étape. Cependant, Thomas a tout de même décidé de commencer la fonction qui permet de trouver \og qui a tué qui ? \fg. Pour se faire, il a utilisé le résultat qui devrait être fourni par la reconnaissance des entités nommées, et il a cherché les phrases pour lesquelles il y avait une EN représentant une personne ou deux personnes, commençant par la lettre D. Suite à cela, il fallait regarder si autour de ces termes, il y avait un terme représentant un meurtre, en s'appuyant sur notre corpus.  
 
 \section{Github}
-\indent Au sein de notre cursus, nous avons l'habitude de réaliser des projets en groupe. De cette façon, nous avons découvert l'outil qu'est GitHub. L'utilisation de ce dernier était obligatoire pour l'élaboration de notre enquêteur. Ainsi, vous pourrez trouver ci-dessous une capture d'écran de notre activité sur cet outil. De plus, si vous souhaitez visiter notre répertoire, vous pouvez vous y rendre en cliquant sur le lien suivant : \url{https://github.com/socosta/TAL-Lettre-D}.
+\indent Au sein de notre cursus, nous avons l'habitude de réaliser des projets en groupe. De cette façon, nous avons découvert l'outil qu'est GitHub. L'utilisation de ce dernier était obligatoire pour l'élaboration de notre enquêteur. Ainsi, vous pourrez trouver ci-dessous une capture d'écran de notre activité sur cet outil. De plus, si vous souhaitez visiter notre répertoire, vous pouvez vous y rendre en cliquant sur le lien suivant : \url{https://github.com/socosta/TAL-Lettre-D}. Une capture d'écran des commits détaillées de chaque membre du groupe est disponible en annexe, sur la figure \ref{detail}, bien que le travail ait été collaboratif tout le long du projet, cette activité détaillée était l'un des documents demandés. 
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.5]{images/github-global.png}
+	\caption{Activité Github globale du projet}
+\end{figure}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.5]{images/github-members.png}
+	\caption{Activité Github du projet par membre}
+\end{figure}
 
 \chapter{Nos champs lexicaux}
 \indent Nous avons choisi quatre champs lexicaux à exploiter pour trouver les meurtriers et les victimes dans notre corpus : ''arme'', ''murder'', ''dead victim'', et ''crime''. Nous avons remarqué plusieurs noms et verbes se trouvant dans plusieurs de nos champs lexicaux, c'est pourquoi à l'aide du site \url{nuagedemots.fr}, nous avons réalisé un nuage des mots de ces champs, afin de visualiser leur occurrence. \newline
@@ -97,7 +109,7 @@ Les champs lexicaux contiennent différentes catégories de mots : on y trouve des
 
 \begin{figure}[h]
 	\center
-	\includegraphics[scale=0.7]{images/wordcloud.png}
+	\includegraphics[scale=0.3]{images/wordcloud.png}
 	\caption{Nuage de mots contenus dans nos différents champs lexicaux avec une taille proportionnelle aux occurrences. 
  - Nuagedemots.fr}
 \end{figure}
@@ -126,11 +138,11 @@ Au cours de l'enseignement que nous avons suivi, nous avons découvert, ou parfoi
 \indent Etant donné que nous ne sommes pas vraiment habitués à écrire des programmes pour le traitement automatique des langues, la réalisation de ce projet nous a posé quelques problèmes. \newline
 Cela a commencé lorsque nous avons dû utiliser le logiciel CoreNLP. Nous n'avions aucune connaissance à sujet. Alors quand nous avons essayé de faire fonctionner les commandes fournies par M.AMBLARD, nous avons été face à des difficultés. En ce qui concerne la commande qui permet d'effectuer le pos-tagging, nous n'arrivions pas à la faire fonctionner sur notre corpus. Nous étions face à une erreur mettant en cause la place disponible dans notre machine virtuelle. A force de persévérance, avec l'aide de certains de nos camarades d'autres groupes, nous avons réussi à obtenir le résultat souhaité. Cependant, lorsque nous avons voulu utiliser la commande permettant l'identification des entités nommées, cela ne fonctionnait pas, malgré plusieurs essais, le résultat était toujours le même : le terminal n’arrivait pas au bout de sa tentative. Ainsi, nous nous sommes dit que la taille importante de notre corpus était peut-être en cause, mais même sur un extrait, cela n'allait pas. Alors, nous avons tenté de trouver une solution. Et Olivia trouva ce site : \url{http://www.lattice.cnrs.fr/sites/itellier/SEM.html}. A partir d'un texte, il est possible de mettre en avant différentes choses : \textit{pos}, \textit{chunk} et \textit{entités nommées}. Ci-dessous, une capture d'écran afin de se rendre compte de ce que cela donne lorsque nous voulons trouver les entités nommées d’un texte : 
 
-\includegraphics[scale=0.5]{images/sem.png}
+\includegraphics[scale=0.3]{images/sem.png}
 \\
 Une légende est associé au surlignage :
 
-\includegraphics[scale=0.5]{images/sem-legend.png}
+\includegraphics[scale=0.3]{images/sem-legend.png}
 
 \indent Ainsi, nous nous sommes dit que nous avions une solution de secours si nous n'arrivions pas à établir les entités nommées à partir de Python et de la librairie NLTK. Sachant qu'il est possible d'extraire le résultat du site sous les formes suivantes : HTML, coll ou text. Heureusement, nous avons fini par trouver la solution pour établir la reconnaissance des entités nommées avec Python. Mais un nouveau problème s'est présenté à nous, cela a pris beaucoup plus de temps que nous ne l'imaginions. 
 
@@ -148,10 +160,17 @@ Enfin, notre plus gros défaut a été de ne pas savoir gérer notre temps avec les 
 
 \appendix % les annexes du rapport
 
-\chapter{Premier annexe}
-\chapter{Second annexe}
+\chapter{Activité Github}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.5]{images/github-detail.png}
+	\caption{Activité détaillée Github des membres du groupe}
+	\label{detail}
+\end{figure}
+
 
 \listoffigures        % Liste des figures
-\listoftables        % Liste des tableaux
+
 
 \end{document}
