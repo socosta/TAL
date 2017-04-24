@@ -1,0 +1,118 @@
+#######WEAPONS#######
+###NOUN###
+gun
+axe
+battle-axe
+candlestick
+deer foot
+knife
+poison
+rope
+artillery
+heavy weapon
+ordnance
+tongue
+toxicant
+poisonous substance
+cutter
+stonecutter
+###VERB###
+poison
+envenom
+#######CRIME#######
+###VERB###
+kill
+killing
+killed
+putting to death
+destruction
+shoot down
+cause to die
+pip
+murder
+assassinate
+beath to death
+commit a crime
+commit a murder
+explose
+walnut
+constrict
+strangulate
+scrag
+throttle
+strangle
+neck
+pinch in
+stifle
+smother
+muffle
+repress
+suffocate
+asphyxiate
+###NOUN###
+gunman
+gunslinger
+hired gun
+gun for hire
+triggerman
+hit man
+hitman
+torpedo
+shooter
+grease gun
+#######DEADVICTIME#######
+###ADJECTIVE###
+dead
+beat
+all in
+bushed
+numb
+deadened
+idle
+stagnant
+drained
+###ADVERB###
+abruply
+suddenly
+###NOUN###
+victim
+dupe
+haughtiness
+morgue
+mortuary
+###VERB###
+strip
+#######MURDER#######
+###VERB###
+die
+murder
+murdering
+murdered
+slay
+slaying
+mutilate
+hit
+mangle
+crush
+crushing
+butcher
+shred
+maul
+cut up
+tear up
+rip up
+###NOUN###
+decease
+end
+death
+murder
+murdering
+execution
+murderer
+manslayer
+###ADJECTIVES###
+murdered
+killed
+executed
+crushed
+mutilated
